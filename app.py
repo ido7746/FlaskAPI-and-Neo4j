@@ -126,6 +126,15 @@ api.add_resource(FindAunt, "/FindAunt")
 
 if __name__ == "__main__":
     #run the API server
-    loadData()
-    app.run(host='0.0.0.0',port=8000)
+    for i in range(5):#waiting to the neo4j server
+        try:
+            loadData()
+            app.run(host='0.0.0.0',port=8000)
+        except KeyboardInterrupt:
+            exit(0)
+        except Exception as e:
+            print(f"Exception: retring in 2 seconds")
+            print(e)
+            time.sleep(5)
+    print("Done retring")
     

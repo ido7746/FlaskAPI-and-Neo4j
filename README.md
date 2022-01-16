@@ -5,6 +5,18 @@
 Run instruction:
 
 ```
-git clone https://github.com/ido7746/flaskAPI-server-on-Docker
 docker-compose up
 ```
+
+# Request
+
+## API Resources
+
+* GET /FindByAddress/[int:number]
+* GET /FindAunt
+
+
+
+
+
+
