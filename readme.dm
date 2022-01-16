@@ -1,2 +1,4 @@
-Run insteuctions
-```docker-compose up```
+Run insteuctions:
+```
+docker-compose up
+```
