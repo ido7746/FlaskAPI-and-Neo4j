@@ -42,7 +42,6 @@ app = Flask(__name__)
 api = Api(app)
 
 #connect to neo4j
-time.sleep(2)
 graph = GraphDatabase.driver(uri = "bolt://neo4j:7687", auth = ("neo4j", "test"))
 
 
@@ -125,11 +124,10 @@ api.add_resource(FindAunt, "/FindAunt")
 
 
 if __name__ == "__main__":
-    #run the API server
     for i in range(5):#waiting to the neo4j server
         try:
             loadData()
-            app.run(host='0.0.0.0',port=8000)
+            app.run(host='0.0.0.0',port=8000)#run FlaskAPI server
         except KeyboardInterrupt:
             exit(0)
         except Exception as e:
