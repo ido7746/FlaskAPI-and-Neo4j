@@ -131,7 +131,7 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             exit(0)
         except Exception as e:
-            print(f"Exception: retring in 2 seconds")
+            print(f"Exception: retring in 5 seconds")
             print(e)
             time.sleep(5)
     print("Done retring")
